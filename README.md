@@ -15,6 +15,7 @@ To run this example:
 
 1. Provide the resource group you want to put the virtual machine and it's components into.
 1. Provide the subnet id you want to attach the virtual machine to.
+1. Optionally-- depending on your subnet range, you may have to change the `azurerm_network_interface.example.ip_configuration.private_ip_address` value.
 1. Create a `terraform.tfvars` file and populate that file with the appropriate input variables (for resource group and subnet id).
 1. Run `terraform plan` to check the resources which are about to be made.
 1. Run `terraform apply -auto-approve` to provision the virtual machine.
