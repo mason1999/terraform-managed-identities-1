@@ -8,6 +8,7 @@ Ensure that you have:
 
 1. An existing resource group.
 1. An existing subnet id.
+1. Terraform CLI installed.
 
 # Running the example
 
@@ -20,8 +21,11 @@ To run this example:
 1. Run `terraform plan` to check the resources which are about to be made.
 1. Run `terraform apply -auto-approve` to provision the virtual machine.
 1. Assign the newly created managed identity `vm-example-1` the `Reader` role over your resource group.
+1. SSH into the virtual machine. There is a script called `jump.sh` which is offered which prints out the password (we're not worried about the data on the ephemeral VM) for ease. You can use `jump.sh` to quickly jump into the VM.
 1. copy the `request.sh` to your virtual machine and make it executable with `chmod u+x requests.sh`.
    - You can run the script `./requests.sh` and it will tell you the parameter you need to enter.
    - To see theoutput better I'd reccomend to pipe the result into `jq`.
 1. You should see output similar to this:
    ![Output of running the requests script](./images/output.png)
+1. Exit the connection from the session with `ctrl+d`.
+1. Run `terraform apply -auto-approve -destroy` to clean up the resources we created.
