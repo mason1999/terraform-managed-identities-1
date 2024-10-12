@@ -24,7 +24,7 @@ To run this example:
 1. SSH into the virtual machine. There is a script called `jump.sh` which is offered which prints out the password (we're not worried about the data on the ephemeral VM) for ease. You can use `jump.sh` to quickly jump into the VM.
 1. copy the `request.sh` to your virtual machine and make it executable with `chmod u+x requests.sh`.
    - You can run the script `./requests.sh` and it will tell you the parameter you need to enter.
-   - To see theoutput better I'd reccomend to pipe the result into `jq`.
+   - To see the output better I'd reccomend to pipe the result into `jq`.
 1. You should see output similar to this:
    ![Output of running the requests script](./images/output.png)
 1. Exit the connection from the session with `ctrl+d`.
